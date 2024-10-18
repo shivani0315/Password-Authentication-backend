@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'frontend/src'))); // Adjust the pat
 
 
 // Middleware
-app.use(cors()); // Allow cross-origin requests
+app.use(cors({origin: ['https://password-reset-api.netlify.app/forgot-password']})); // Allow cross-origin requests
 app.use(express.json());
 app.use(bodyParser.json()); // Parse JSON bodies
 app.use('/api', routes);
